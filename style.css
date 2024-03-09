@@ -1,4 +1,60 @@
 body
 {
-    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.btn
+{
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+button.number
+{
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+}
+button.operator
+{
+    border: 1px solid pink;
+    border-radius: 10px;
+}
+button.clear
+{
+    border: 1px solid red;
+    border-radius: 10px;
+}
+button.decimal
+{
+    border: 1px solid seagreen;
+    border-radius: 10px;
+}
+button.equal
+{
+    border: 1px solid purple;
+    border-radius: 10px;
+}
+button.number:hover
+{
+    background-color: aquamarine;
+}
+button.operator:hover
+{
+    background-color: slateblue;
+}
+button.equal:hover
+{
+    background-color: salmon;
+}
+button.clear:hover
+{
+    background-color: palegreen;
+}
+button.decimal:hover
+{
+    background-color: darkkhaki;
 }
