@@ -30,7 +30,36 @@ function clearScreen()
     currentScreen.textContent = currentContent;
     previousScreen.textContent = previousContent;
 }
-
+function roundNum(num)
+{
+    return Math.round(num * 1000) / 1000;
+}
+function calculate()
+{
+    switch (operator)
+    {
+        case '+':
+            previousScreen.textContent = previousContent + ' ' + operator + ' ' + currentContent;
+            currentScreen.textContent = String(roundNum(Number(previousContent) + Number(currentContent)));
+            break;
+        case '-':
+            previousScreen.textContent = previousContent + ' ' + operator + ' ' + currentContent;
+            currentScreen.textContent = String(roundNum(Number(previousContent) - Number(currentContent)));
+            break;
+        case '/':
+            previousScreen.textContent = previousContent + ' ' + operator + ' ' + currentContent;
+            currentScreen.textContent = String(roundNum(Number(previousContent) / Number(currentContent)));
+            break;
+        case 'x':
+            previousScreen.textContent = previousContent + ' ' + operator + ' ' + currentContent;
+            currentScreen.textContent = String(roundNum(Number(previousContent) * Number(currentContent)));
+            break;
+    }   
+}
+function addDecimal()
+{
+    if (!currentContent.includes('.')) currentContent += '.';
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     numbers.forEach((number) => number.addEventListener('click', function (e) {
@@ -42,5 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         handleOp(e.target.textContent);
         previousScreen.textContent = previousContent + ' ' + operator;
     }))
-    // clear.addEventListener('click', clearScreen);
+    clear.addEventListener('click', clearScreen);
+    equal.addEventListener('click', calculate);
+    decimal.addEventListener('click', addDecimal);
 })
