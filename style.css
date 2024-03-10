@@ -58,3 +58,32 @@ button.decimal:hover
 {
     background-color: darkkhaki;
 }
+.first-row
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+#screen
+{
+    height: 63px;
+    border: 1px solid salmon;
+    border-radius: 7px;
+    width: 235px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.previous
+{
+    font-size: 15px;
+    margin: 0;
+}
+.current
+{
+    font-size: 28px;
+    margin: 0;
+}
